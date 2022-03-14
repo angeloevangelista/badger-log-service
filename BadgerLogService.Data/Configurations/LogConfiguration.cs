@@ -19,6 +19,9 @@ namespace BadgerLogService.Data.Configurations
       builder.Property(pre => pre.Id)
         .HasColumnName("id");
 
+      builder.Property(pre => pre.ApplicationId)
+        .HasColumnName("application_id");
+
       builder.Property(pre => pre.Message)
         .HasColumnName("message")
         .HasColumnType("VARCHAR(100)")
@@ -46,10 +49,10 @@ namespace BadgerLogService.Data.Configurations
 
       builder.Property(pre => pre.Level)
         .HasColumnName("level")
-        .HasColumnType("NUMERIC")
+        .HasColumnType("NUMERIC(1,0)")
         .HasDefaultValue(LogLevel.Unknown)
         .HasConversion(
-          enumValue => ((char)enumValue).ToString(),
+          enumValue => (int)enumValue,
           numericValue => UtilEnum.Parse<LogLevel>(numericValue)
         )
         .IsRequired();

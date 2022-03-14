@@ -1,5 +1,5 @@
 using System;
-using BadgerLogService.Shared.Enumerators;
+using BadgerLogService.Shared.Enums;
 
 namespace BadgerLogService.Shared.Entities
 {

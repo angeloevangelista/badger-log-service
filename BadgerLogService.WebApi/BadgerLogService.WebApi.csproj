@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BadgerLogService.Domain\BadgerLogService.Domain.csproj" />
+    <ProjectReference Include="..\BadgerLogService.Shared\BadgerLogService.Shared.csproj" />
+    <ProjectReference Include="..\BadgerLogService.Implementation\BadgerLogService.Implementation.csproj" />
+    <ProjectReference Include="..\BadgerLogService.Data\BadgerLogService.Data.csproj" />
+  </ItemGroup>
+
+</Project>

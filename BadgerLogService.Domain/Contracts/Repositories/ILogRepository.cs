@@ -8,6 +8,6 @@ namespace BadgerLogService.Domain.Contracts.Repositories
   {
     Task<Log> CreateLog(Log log);
     Task<Log> FindLogById(Log log);
-    Task<List<Log>> ListLogsByApplicationId(Application application);
+    List<Log> ListLogsByApplicationId(Application application);
   }
 }

@@ -11,7 +11,7 @@ using System;
 
 namespace BadgerLogService.Shared.Controllers
 {
-  [Authorize]
+  // [Authorize]
   public abstract class CustomControllerBase : ControllerBase
   {
     private readonly IJwtService _jwtService;

@@ -23,7 +23,7 @@ namespace BadgerLogService.Data.Configurations
         .IsRequired();
 
       builder.Property(pre => pre.Name)
-        .HasColumnName("source")
+        .HasColumnName("name")
         .HasColumnType("VARCHAR(60)")
         .IsRequired();
 

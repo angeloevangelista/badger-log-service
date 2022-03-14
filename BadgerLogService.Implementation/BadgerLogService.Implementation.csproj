@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BadgerLogService.Domain\BadgerLogService.Domain.csproj" />
     <ProjectReference Include="..\BadgerLogService.Shared\BadgerLogService.Shared.csproj" />
+    <ProjectReference Include="..\BadgerLogService.Data\BadgerLogService.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BadgerLogService.Data.Contexts
 {
-  public sealed class BadgerLogServiceContext : DbContext
+  public sealed class BadgerLogServiceDataContext : DbContext
   {
-    public BadgerLogServiceContext(
-      DbContextOptions<BadgerLogServiceContext> options
+    public BadgerLogServiceDataContext(
+      DbContextOptions<BadgerLogServiceDataContext> options
     ) : base(options)
     {
     }
@@ -15,7 +15,7 @@ namespace BadgerLogService.Data.Contexts
     {
       modelBuilder
         .ApplyConfigurationsFromAssembly(
-          typeof(BadgerLogServiceContext).Assembly
+          typeof(BadgerLogServiceDataContext).Assembly
         );
     }
 

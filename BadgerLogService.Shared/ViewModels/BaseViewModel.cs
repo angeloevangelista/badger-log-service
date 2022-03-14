@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using BadgerLogService.Shared.Exceptions;
 
 namespace BadgerLogService.Shared.ViewModels
@@ -8,6 +9,7 @@ namespace BadgerLogService.Shared.ViewModels
   {
     protected IList<string> _brokenRules;
 
+    [JsonIgnore]
     public bool IsValid
     {
       get
@@ -18,6 +20,7 @@ namespace BadgerLogService.Shared.ViewModels
       }
     }
 
+    [JsonIgnore]
     public bool IsInvalid { get => !this.IsValid; }
 
     public BaseViewModel()
